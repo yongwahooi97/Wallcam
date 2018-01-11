@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.easyar.samples.helloarvideo.AppointmentActivity">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <LinearLayout
+        android:id="@+id/appointmentForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="124dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:scrollbars="horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAppointment"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextResidentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/appintment_name"
+                android:inputType="textPersonName"
+                android:textSize="20sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/editTextAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/appointment_address"
+                android:inputType="text"
+                android:textSize="20sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/editTextContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/appoinement_contact"
+                android:inputType="number"
+                android:textSize="20sp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextAppointmentDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="@string/appointment_date"
+                android:inputType="date"
+                android:textSize="20sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textViewAppointmentDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/hint_date"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/appointment_time"
+                android:layout_marginTop="15dp"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinnerTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/time_array" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textViewProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/product"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"/>
+
+        <CheckBox
+            android:id="@+id/checkBoxBrick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/wallpaper_brick"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/checkBoxBlue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wallpaper_blue"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/checkBoxWooden"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wallpaper_wooden"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/checkBoxWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wallpaper_word"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/checkBoxArt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/art_work"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/buttonAppointment"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/make_appointment"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

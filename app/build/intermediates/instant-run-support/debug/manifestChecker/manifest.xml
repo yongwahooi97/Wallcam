@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.easyar.samples.helloarvideo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:testOnly="true"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+        <activity android:name="cn.easyar.samples.helloarvideo.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.easyar.samples.helloarvideo.CameraActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="cn.easyar.samples.helloarvideo.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name="cn.easyar.samples.helloarvideo.SignupActivity"
+            android:label="@string/title_activity_sign_up" />
+        <activity android:name="cn.easyar.samples.helloarvideo.CategoryActivity" />
+        <activity android:name="cn.easyar.samples.helloarvideo.ProfileActivity" />
+        <activity android:name="cn.easyar.samples.helloarvideo.ChangePasswordActivity" />
+        <activity android:name="cn.easyar.samples.helloarvideo.AboutActivity" />
+        <activity
+            android:name="cn.easyar.samples.helloarvideo.AppointmentActivity"
+            android:label="Appointment" />
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.0.0" />
+
+        <provider
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="cn.easyar.samples.helloarvideo.com.android.tools.ir.server.InstantRunContentProvider"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>
